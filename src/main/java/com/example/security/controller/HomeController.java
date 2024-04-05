@@ -12,16 +12,12 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping("/home")
-    @PreAuthorize("hasAuthority('ROLE_USER')")
-    // only user can open this page
+    @RequestMapping("/profile")
     public String home(){
-        return "home";
+        return "profile";
     }
 
     @RequestMapping("/about")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    // only admin can open this page
     public String about(){
         return "about";
     }
